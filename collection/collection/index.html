@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>collection</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.staticfile.org/vue/2.6.9/vue.js"></script>
+
+</head>
+
+<body>
+    <section id="collection" >
+        <h1 class="heading">
+            <img src="./bg.jpg" alt="">
+        </h1>
+        
+         
+
+    <div class="container">
+        <div class="box">
+            <div class="top-bar"></div>
+
+            <div class="details">
+                <img src="" alt="">
+                <strong>ITEM 1</strong>
+
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="top-bar"></div>
+
+            <div class="details">
+                <img src="" alt="">
+                <strong>ITEM 2</strong>
+
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="top-bar"></div>
+
+            <div class="details">
+                <img src="" alt="">
+                <strong>ITEM 2</strong>
+
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="top-bar"></div>
+
+            <div class="details">
+                <img src="" alt="">
+                <strong>ITEM 3</strong>
+
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="top-bar"></div>
+
+            <div class="details">
+                <img src="" alt="">
+                <strong>ITEM 4</strong>
+
+            </div>
+        </div>
+    </div>
+    </section>
+</body>
+
+<script>
+    var vue = new Vue({
+        el: '#app',
+        data: {
+            active :'login',
+            registerForm:{
+                email : '',
+                Username : '',
+                Password : '',
+                repeat : ''
+            },
+            loginForm :{
+                Username : '',
+                Password : ''
+            }
+        },
+        methods: {
+            go(type){
+                this.active = type;
+            },
+            submit(){
+                if(type === 'login'){
+                    console.log('login',this.loginForm)
+                }
+                if(type === 'register'){
+                    console.log('register',this.registerForm)
+                }
+            }
+        }
+    })
+</script>
+</html>
